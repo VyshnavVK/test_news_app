@@ -1,0 +1,10 @@
+package com.vyshnav.test_news_app.api.retrofit
+
+sealed class ApiState {
+
+    object Loading : ApiState()
+    class Failure(val e: Throwable) : ApiState()
+    class Success(val data: Any) : ApiState()
+    object Empty : ApiState()
+
+}
